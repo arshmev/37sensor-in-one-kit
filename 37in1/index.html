@@ -596,7 +596,7 @@
             return {
                 ...sensor,
                 // Automatically constructs relative path, or uses a placeholder if mapping is missing
-                imageUrl: imageFileName ? (imageFolder + imageFileName) : `https://placehold.co/600x400/e2e8f0/475569?text=Image:+${shortName}`
+                imageUrl: imageFileName ? (imageFolder + encodeURIComponent(imageFileName)) : `https://placehold.co/600x400/e2e8f0/475569?text=Image:+${shortName}`
             };
         });
 
